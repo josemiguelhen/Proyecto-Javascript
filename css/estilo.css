@@ -115,15 +115,13 @@ body {
   font-family: "Roboto Slab", serif;
   font-weight: 200; }
 
-
-
 .cardColor {
     padding: 20px;
     background-color: cyan;
     border: 2px solid black;
 }
 
-.container {
+#contenido {
     display: flex;
     flex-wrap: wrap;
     gap:20px;

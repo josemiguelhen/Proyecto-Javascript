@@ -1,6 +1,6 @@
 const seccion = document.querySelector("section#contenido")
 const loader = document.querySelector("section.loader")
-const URL = "js/carritoproductos.json"
+const URL = "/js/carritoproductos.json"
 let tf = []
 let contenidoHTML=""
 
@@ -22,6 +22,21 @@ productos.forEach((prod) => {
 });
 agregarFuncionalidad();
 }
+
+//FETCH
+
+const retornoContenido = () => {
+  return '<div class = "card">
+  <img class = "poster" id = "" src= "${contenido.poster}" alt = "${contenido titulo}" title = "${contenido.titulo}">
+    </div>'
+}
+
+const retornoCardError = () => {
+  return '<div class="error-contenido">
+  <p>Parece que hubo un error:(</p>
+  <p>Intenta nuevamente en unos segundos...</p>
+  </div>'
+  }
 
 function agregarFuncionalidad() {
 productos.forEach((prod) => {
@@ -97,6 +112,23 @@ Swal.fire({
 })
 }
 
+//FETCH
 
+const cargarContenido = async () => {
+  await fetch('js/carritoproductos.json')
+    .then((response) => response.json())
+    .then((data) => {
+      tf = data
+      tf.forEach(contenido => {
+        contenidoHTML += retornoCardContenido(contenido)
+      });
+      seccion.innerHTML = contenidoHTML
+    })
+    .catch((error) => {
+      seccion.innerHTML = retornoCardError()
+    })
+    .finally(() => loader.innerHTML = "")
+}
+cargarcontenido()
 
 

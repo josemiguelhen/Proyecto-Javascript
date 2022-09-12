@@ -1,4 +1,4 @@
-const productos = [
+const tf = [
                     {
                         id:1, 
                         nombre:"POLERA BLANCA PINK FLOYD", 
