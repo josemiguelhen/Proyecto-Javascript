@@ -6,28 +6,15 @@ const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         pintarCarrito()
     }
-    const todoComprar = document.querySelector(".comprar-Todo")
-    todoComprar.addEventListener("click", () => {
-        setTimeout(() => {
-            carrito.length = 0
-            carrito = {}
-            pintarCarrito()
-        }, 1000)
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Gracias por su compra',
-            showConfirmButton: false,
-            timer: 1000
-        })
-    })
 })
+
 cards.addEventListener('click', e => {
     addCarrito(e)
 })
@@ -56,13 +43,15 @@ const pintarCards = data => {
     })
     cards.appendChild(fragment)
 }
+
 const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         setCarrito(e.target.parentElement)
     }
     e.stopPropagation()
-    toastSwal("El producto ha sido agregado al carrito!",'info',"green")
+    toastSwal("El producto ha sido agregado al carrito!", 'info', "green")
 }
+
 const setCarrito = objeto => {
     const producto = {
         id: objeto.querySelector('.btn-dark').dataset.id,
@@ -76,6 +65,7 @@ const setCarrito = objeto => {
     carrito[producto.id] = { ...producto }
     pintarCarrito()
 }
+
 const pintarCarrito = () => {
 
     items.innerHTML = ''
@@ -93,7 +83,25 @@ const pintarCarrito = () => {
     pintarFooter()
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
+    const todoComprar = document.querySelector(".comprar-Todo")
+    todoComprar.addEventListener("click", () => {
+        setTimeout(() => {
+            carrito.length = 0
+            carrito = {}
+            pintarCarrito()
+        }, 1000)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Muchas gracias por su compra',
+            showConfirmButton: false,
+            timer: 1000
+        })
+    })
+
+
 }
+
 const pintarFooter = () => {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
@@ -114,7 +122,7 @@ const pintarFooter = () => {
     btnVaciar.addEventListener('click', () => {
         carrito = {}
         pintarCarrito()
-        toastSwal("El carrito ha sido vaciado!",'info',"red")
+        toastSwal("El carrito ha sido vaciado!", 'info', "red")
     })
 
 }
@@ -133,7 +141,7 @@ const btnAccion = e => {
             delete carrito[e.target.dataset.id]
         }
         pintarCarrito()
-        toastSwal("El producto ha sido eliminado del carrito!",'info',"red")
+        toastSwal("El producto ha sido eliminado del carrito!", 'info', "red")
     }
     e.stopPropagation()
 }
