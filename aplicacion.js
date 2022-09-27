@@ -46,6 +46,7 @@ const addCarrito = e => {
         setCarrito(e.target.parentElement)
     }
     e.stopPropagation()
+    toastSwal("El producto ha sido agregado al carrito!",'info',"green")
 }
 const setCarrito = objeto => {
     const producto = {
@@ -81,7 +82,7 @@ const pintarCarrito = () => {
 const pintarFooter = () => {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
-        footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+        footer.innerHTML = `<th scope="row" colspan="5">Su carrito se encuentra vacío!</th>`
         return
     }
     const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
@@ -98,6 +99,7 @@ const pintarFooter = () => {
     btnVaciar.addEventListener('click', () => {
         carrito = {}
         pintarCarrito()
+        toastSwal("El carrito ha sido vaciado!",'info',"red")
     })
 
 }
@@ -116,6 +118,20 @@ const btnAccion = e => {
             delete carrito[e.target.dataset.id]
         }
         pintarCarrito()
+        toastSwal("El producto ha sido eliminado del carrito!",'info',"red")
     }
     e.stopPropagation()
+}
+
+const toastSwal = (mensaje, icono, bgcolor) => {
+    Swal.fire({
+        toast: true,
+        position: 'top end',
+        text: mensaje,
+        icon: icono,
+        showConfirmButton: false,
+        timer: 4000,
+        background: bgcolor,
+        color: 'white'
+    })
 }

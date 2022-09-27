@@ -17,7 +17,7 @@ footer {
 }
 
 header {
-    background-image: url(/Images/mar.jpg);
+    background-image: url(Images/mar.jpg);
     background-size: cover;
     font-weight: 600;
     font-size: xx-large;
