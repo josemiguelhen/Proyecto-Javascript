@@ -1,5 +1,18 @@
-body {
+.contenedor{
     background-color: cadetblue;
+}
+
+.container{
+    background-color: aquamarine;
+
+}
+
+.titulo-car{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.col-12 {
+    background-color: aqua;
 }
 
 footer {
@@ -9,7 +22,7 @@ footer {
 
 .footer-pag h2 h3 h4 h5 {
     font-size: 15px;
-    font-size: medium;
+    font-size: xx-small;
 }
 
 .corp {
@@ -43,10 +56,17 @@ header {
 
 .navbar div a {
     color: white;
-    font-size: medium;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .collapse ul li a {
-    font-family: "Roboto Slab", serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 1200;
+}
+
+#cards {
+    padding: 20px;
+    background-color: green;
+    border: 2px solid black;
 }

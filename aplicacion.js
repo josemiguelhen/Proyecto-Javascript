@@ -120,9 +120,9 @@ const pintarFooter = () => {
 
     const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () => {
+        toastSwal("El carrito ha sido vaciado!", 'info', "red")
         carrito = {}
         pintarCarrito()
-        toastSwal("El carrito ha sido vaciado!", 'info', "red")
     })
 
 }
@@ -140,8 +140,8 @@ const btnAccion = e => {
         if (producto.cantidad === 0) {
             delete carrito[e.target.dataset.id]
         }
-        pintarCarrito()
         toastSwal("El producto ha sido eliminado del carrito!", 'info', "red")
+        pintarCarrito()
     }
     e.stopPropagation()
 }
