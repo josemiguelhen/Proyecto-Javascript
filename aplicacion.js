@@ -12,6 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         pintarCarrito()
     }
+    const todoComprar = document.querySelector(".comprar-Todo")
+    todoComprar.addEventListener("click", () => {
+        setTimeout(() => {
+            carrito.length = 0
+            carrito = {}
+            pintarCarrito()
+        }, 1000)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Gracias por su compra',
+            showConfirmButton: false,
+            timer: 1000
+        })
+    })
 })
 cards.addEventListener('click', e => {
     addCarrito(e)
