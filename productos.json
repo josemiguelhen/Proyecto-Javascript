@@ -70,5 +70,60 @@
         "id": 12,
         "title": "POLERA NEGRA FREE FIRE",
         "img": "Images/juegos4.jpg"
+    },
+    {
+        "precio": 16990, 
+        "id": 13,
+        "title": "POLERA NEGRA BLACK MIRROR",
+        "img": "Images/series1.jpg"
+    },
+    {
+        "precio": 15990, 
+        "id": 14,
+        "title": "POLERA BLANCA BETTER CALL SAUL",
+        "img": "Images/series2.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 15,
+        "title": "POLERA BLANCA BREAKING BAD",
+        "img": "Images/series3.jpg"
+    },
+    {
+        "precio": 16990, 
+        "id": 16,
+        "title": "POLERA NEGRA GAME OF THRONES",
+        "img": "Images/series4.jpg"
+    },
+    {
+        "precio": 32990,
+        "id": 17,
+        "title": "POLERON CANGURO ALIEN X",
+        "img": "Images/poleroncanguro1.jpg"
+    },
+    {
+        "precio": 32990,
+        "id": 18,
+        "title": "POLERON CANGURO ALIEN RIPLEY",
+        "img": "Images/polerocanguro2.jpg"
+    },
+    {
+        "precio":32990,
+        "id":19,
+        "title":"POLERON CANGURO AN AMERICAN",
+        "img":"Images/polerocanguro3.jpg"
+    },
+    {
+        "precio":32990,
+        "id":20,
+        "title":"POLERON CANGURO APOCALYPSE NOW",
+        "img":"Images/poleroncanguro4.jpg"
+    },
+    {
+        "precio":31990,
+        "id":21,
+        "title":"POLERON CANGURO A SPACE ODYSSEY",
+        "img":"Images/poleroncaguro5.jpg"
     }
+    
 ]
