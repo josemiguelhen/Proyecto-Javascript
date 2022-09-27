@@ -1,0 +1,74 @@
+[
+    {
+        "precio": 15990,
+        "id": 1,
+        "title": "POLERA BLANCA PINK FLOYD",
+        "img": "Images/musica1.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 2,
+        "title": "POLERA NEGRA JOY DIVISION",
+        "img": "Images/musica2.jpg"
+    },
+    {
+        "precio": 15990,
+        "id": 3,
+        "title": "POLERA BLANCA NEW KIDS ON THE BLOCK",
+        "img": "Images/musica3.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 4,
+        "title": "POLERA NEGRA I AM HIP HOP",
+        "img": "Images/musica4.jpg"
+    },
+    {
+        "precio": 15990,
+        "id": 5,
+        "title": "POLERA NEGRA HUNTER X",
+        "img": "Images/anime11.jpg"
+    },
+    {
+        "precio": 14990,
+        "id": 6,
+        "title": "POLERA NEGRA NARUTO",
+        "img": "Images/anime2.jpg"
+    },
+    {
+        "precio": 17990, 
+        "id": 7,
+        "title": "POLERA NEGRA TOTORO",
+        "img": "Images/anime3.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 8,
+        "title": "POLERA BLANCA RANMA",
+        "img": "Images/anime4.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 9,
+        "title": "POLERA BLANCA DONKEY KONG",
+        "img": "Images/juegos1.jpg"
+    },
+    {
+        "precio": 16990, 
+        "id": 10,
+        "title": "POLERA BLANCA FORNITE",
+        "img": "Images/juegos2.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 11,
+        "title": "POLERA BLANCA MINECRAFT",
+        "img": "Images/juegos3.jpg"
+    },
+    {
+        "precio": 16990,
+        "id": 12,
+        "title": "POLERA NEGRA FREE FIRE",
+        "img": "Images/juegos4.jpg"
+    }
+]
