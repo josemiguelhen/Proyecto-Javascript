@@ -6,6 +6,7 @@ const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
     if (localStorage.getItem('carrito')) {
@@ -13,20 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
         pintarCarrito()
     }
     const todoComprar = document.querySelector(".comprar-Todo")
-todoComprar.addEventListener("click", () => {
-    setTimeout(()=>{
-        carrito.length = 0
-    carrito = {}
-    pintarCarrito()
-    }, 1000)
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Gracias por su compra',
-        showConfirmButton: false,
-        timer: 1000
-      })
-}) 
+    todoComprar.addEventListener("click", () => {
+        setTimeout(() => {
+            carrito.length = 0
+            carrito = {}
+            pintarCarrito()
+        }, 1000)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Gracias por su compra',
+            showConfirmButton: false,
+            timer: 1000
+        })
+    })
 })
 cards.addEventListener('click', e => {
     addCarrito(e)
@@ -119,13 +120,8 @@ const pintarFooter = () => {
         toastSwal("El carrito ha sido vaciado!", 'info', "red")
     })
 
-    //const btnComprar = document.getElementById('comprar-Todo')
-    //btnVaciar.addEventListener('click', () => {
-    //   carrito = {}
-    //   pintarCarrito()
-    //  toastSwal("Chao!",'info',"red")
-    //})
 }
+
 const btnAccion = e => {
     if (e.target.classList.contains('btn-info')) {
         console.log(carrito[e.target.dataset.id])
@@ -145,7 +141,6 @@ const btnAccion = e => {
     }
     e.stopPropagation()
 }
-
 
 const toastSwal = (mensaje, icono, bgcolor) => {
     Swal.fire({
